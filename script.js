@@ -90,7 +90,7 @@ pourcentage.addEventListener('click', (e) => {
 })
 
 clearEl.addEventListener('click', (e)=>{
-  display1Element.innerText = '0';
+  display1Element.innerText = '00';
   display2Element.value = '0';
   dis2Num = '';
   dis1Num = '';
