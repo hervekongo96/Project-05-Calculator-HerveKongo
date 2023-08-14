@@ -102,14 +102,6 @@ clearLastEl.addEventListener('click', (e) =>{
   dis2Num = '';
 })
 
-function clickButtonEl(key){
-  numberEl.forEach(button => {
-    if(button.innerText === key){
-      button.click();
-    }
-  })
-}
-
 userInput.addEventListener("input", function() {
   this.value = this.value.match(/[0-9.]*/)[0];
 });
