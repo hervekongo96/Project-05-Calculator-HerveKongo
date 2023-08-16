@@ -72,7 +72,7 @@ function clearVar(name = '') {
   dis2Num = '';
 }
 
-// all calcul in calculator
+// all operation calcul in calculator
 function mathOperation() {
   if (lastOperation === '×') {
     result = parseFloat(result) * parseFloat(dis2Num);
