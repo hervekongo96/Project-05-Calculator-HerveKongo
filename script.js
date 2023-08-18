@@ -1,7 +1,3 @@
-import {
-  calculate
-} from './calculator.js';
-
 // // TODO: Faire la manipulation du DOM dans ce fichier
 
 const form = document.querySelector("form");
@@ -91,9 +87,9 @@ function mathOperation() {
 // using button equal
 equalEl.addEventListener('click', (e) => {
   if (!dis1Num || !dis2Num) return;
-    haveDot = false;
-    mathOperation();
-    clearVar();
+  haveDot = false;
+  mathOperation();
+  clearVar();
   if (result == "Infinity" || result == "NaN") {
     display2Element.value = 'Error'
   } else {
@@ -131,68 +127,68 @@ clearLastEl.addEventListener('click', (e) => {
   if (display2Element.value == '') {
     return
   } else {
-    display2Element.value = display2Element.value.slice(0,-1);
+    display2Element.value = display2Element.value.slice(0, -1);
     // display2Element.value = ''
     // dis2Num = '';
   }
 })
 
 // input the value in the key
-window.addEventListener('keydown', (e) => {
-  if (
-    e.key == '0' ||
-    e.key == '1' ||
-    e.key == '2' ||
-    e.key == '3' ||
-    e.key == '4' ||
-    e.key == '5' ||
-    e.key == '6' ||
-    e.key == '7' ||
-    e.key == '8' ||
-    e.key == '9' ||
-    e.key == '.'
-  ) {
-    clickButtonEl(e.key);
-  } else if (
-    e.key == '+' ||
-    e.key == '-' ||
-    e.key == '%'
-  ) {
-    clickOperation(e.key);
-  } else if (e.key == "*") {
-    clickOperation('x');
-  } else if (e.key == 'Enter' || e.key == "=") {
-    clickEqual();
-  }
-});
+// window.addEventListener('keydown', (e) => {
+//   if (
+//     e.key == '0' ||
+//     e.key == '1' ||
+//     e.key == '2' ||
+//     e.key == '3' ||
+//     e.key == '4' ||
+//     e.key == '5' ||
+//     e.key == '6' ||
+//     e.key == '7' ||
+//     e.key == '8' ||
+//     e.key == '9' ||
+//     e.key == '.'
+//   ) {
+//     clickButtonEl(e.key);
+//   } else if (
+//     e.key == '+' ||
+//     e.key == '-' ||
+//     e.key == '%'
+//   ) {
+//     clickOperation(e.key);
+//   } else if (e.key == "*") {
+//     clickOperation('x');
+//   } else if (e.key == 'Enter' || e.key == "=") {
+//     clickEqual();
+//   }
+// });
 
-function clickButtonEl(key) {
-  numberEl.forEach(button => {
-    if (button.innerText === key) {
-      button.click();
-    }
-  })
-}
+// function clickButtonEl(key) {
+//   numberEl.forEach(button => {
+//     if (button.innerText === key) {
+//       button.click();
+//     }
+//   })
+// }
 
-function clickOperation(key) {
-  operationEL.forEach(button => {
-    if (button.innerText === key) {
-      button.click();
-    }
-  })
-}
+// function clickOperation(key) {
+//   operationEL.forEach(button => {
+//     if (button.innerText === key) {
+//       button.click();
+//     }
+//   })
+// }
 
-function clickEqual() {
-  equalEl.click();
-}
+// function clickEqual() {
+//   equalEl.click();
+// }
 
-userInput.addEventListener("input", function () {
+userInput.addEventListener("input", function() {
   this.value = this.value.match(/[0-9.]*/)[0];
 });
-form.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event) {
   event.preventDefault();
 });
-form.addEventListener("reset", function (event) {
+form.addEventListener("reset", function(event) {
   event.preventDefault();
 });
 
